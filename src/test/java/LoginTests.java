@@ -6,9 +6,11 @@ import static com.codeborne.selenide.Selenide.open;
 public class LoginTests {
     @Test
     void successfulSearchTest() {
+
         open("https://www.saucedemo.com/");
         $("#user-name").setValue("standard_user");
         $("#password").setValue("secret_sauce");
         $("#login-button").click();
+
     }
 }
