@@ -30,7 +30,7 @@ public class LoginTests {
     void loginStandardUserWithStep() {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
-        step("Открываем главную авторизации", () -> {
+        step("Открываем страницу авторизации", () -> {
             open(BASE_URL);
         });
 
