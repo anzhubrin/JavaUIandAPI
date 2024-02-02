@@ -9,8 +9,8 @@ repositories {
 dependencies {
     testImplementation (
             "com.codeborne:selenide:6.16.0",
-            "org.slf4j:slf4j-simple:1.7.29",
-            "org.junit.jupiter:junit-jupiter:5.9.3")
+            "org.slf4j:slf4j-simple:1.7.29",  // удаление лишних логов в консоли
+            "org.junit.jupiter:junit-jupiter:5.9.3") //библиотека JUnit 5
 }
 
 tasks.withType(JavaCompile) {

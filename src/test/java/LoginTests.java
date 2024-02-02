@@ -4,12 +4,18 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class LoginTests {
+
+    String standardUser = "standard_user";
+    String password = "secret_sauce";
+
+    String BASE_URL = "https://www.saucedemo.com/";
+
     @Test
     void successfulSearchTest() {
 
-        open("https://www.saucedemo.com/");
-        $("#user-name").setValue("standard_user");
-        $("#password").setValue("secret_sauce");
+        open(BASE_URL);
+        $("#user-name").setValue(standardUser);
+        $("#password").setValue(password);
         $("#login-button").click();
 
     }
