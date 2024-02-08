@@ -1,4 +1,4 @@
-package com.saucedemo;
+package login;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
