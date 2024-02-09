@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class LoginTests {
+public class LoginStandardUser {
 
     String standardUser = "standard_user";
     String password = "secret_sauce";
@@ -18,6 +18,5 @@ public class LoginTests {
         $("#password").setValue(password);
         $("#login-button").click();
         $(".title").shouldHave(Condition.exactText("Products"));
-
     }
 }
