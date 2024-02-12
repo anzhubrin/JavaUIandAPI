@@ -3,23 +3,20 @@ package login;
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import pages.LoginPage;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class LoginProblemUser {
 
-    String problemUser = "problem_user";
-    String password = "secret_sauce";
-
-    @DisplayName("Авторизация пользователя")
+    LoginPage loginPage = new LoginPage();
     @Test
     void loginStandardUser() {
 
-        open("https://www.saucedemo.com/");
-        $("#user-name").setValue(problemUser);
-        $("#password").setValue(password);
-        $("#login-button").click();
-        $(".title").shouldHave(Condition.exactText("Products"));
+        loginPage.openLoginPage();
+        loginPage.setLogin("problem_user");
+        loginPage.setPassword("secret_sauce");
+        loginPage.clickLoginButton();
     }
 }
