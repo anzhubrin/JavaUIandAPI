@@ -3,7 +3,10 @@ package login;
 import org.junit.jupiter.api.Test;
 import pages.LoginPage;
 
-public class LoginLockedUser {
+public class LoginLockedUserTest {
+
+    private final String LOGIN = "locked_out_user";
+    private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
 
@@ -11,8 +14,8 @@ public class LoginLockedUser {
     void loginLockedUser(){
 
         loginPage.openLoginPage();
-        loginPage.setLogin("locked_out_user");
-        loginPage.setPassword("secret_sauce");
+        loginPage.setLogin(LOGIN);
+        loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButtonAndError();
     }
 }
