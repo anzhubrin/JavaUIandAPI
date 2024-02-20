@@ -1,6 +1,5 @@
 package sorting;
 
-import com.codeborne.selenide.Condition;
 import login.LoginStandardUserTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
