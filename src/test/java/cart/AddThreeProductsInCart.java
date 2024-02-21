@@ -11,7 +11,7 @@ public class AddThreeProductsInCart {
     private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
-    InventoryPage addingToCart = new InventoryPage();
+    InventoryPage inventoryPage = new InventoryPage();
 
     @DisplayName("Добавление трех товаров в корзину")
     @Test
@@ -20,7 +20,7 @@ public class AddThreeProductsInCart {
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButton();
-        addingToCart.addAndCheckOneProduct();
-        addingToCart.addAndCheckSecondAndThirdProduct();
+        inventoryPage.addAndCheckOneProduct();
+        inventoryPage.addAndCheckSecondAndThirdProduct();
     }
 }

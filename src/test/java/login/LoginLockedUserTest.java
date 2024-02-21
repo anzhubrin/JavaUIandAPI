@@ -14,7 +14,6 @@ public class LoginLockedUserTest {
     @DisplayName("Авторизация заблокированного пользователя")
     @Test
     void loginLockedUser(){
-
         loginPage.openLoginPage();
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);

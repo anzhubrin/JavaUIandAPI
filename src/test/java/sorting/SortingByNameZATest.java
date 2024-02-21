@@ -11,17 +11,16 @@ public class SortingByNameZATest {
     private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
-    InventoryPage sorting = new InventoryPage();
+    InventoryPage inventoryPage = new InventoryPage();
 
     @DisplayName("Обратная сортировка по алфавиту")
     @Test
     void sortingByNameZA() {
-        sorting.clickZA();
-        sorting.checkZA();
         loginPage.openLoginPage();
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButton();
-
+        inventoryPage.clickZA();
+        inventoryPage.checkZA();
         }
 }

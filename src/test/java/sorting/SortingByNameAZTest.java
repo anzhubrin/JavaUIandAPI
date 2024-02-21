@@ -11,7 +11,7 @@ public class SortingByNameAZTest {
     private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
-    InventoryPage sorting = new InventoryPage();
+    InventoryPage inventoryPage = new InventoryPage();
 
     @DisplayName("Сортировка по алфавиту")
     @Test
@@ -20,7 +20,7 @@ public class SortingByNameAZTest {
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButton();
-        sorting.clickAZ();
-        sorting.checkAZ();
+        inventoryPage.clickAZ();
+        inventoryPage.checkAZ();
     }
 }

@@ -11,7 +11,7 @@ public class SortingByPriceHighToLowTest {
     private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
-    InventoryPage sorting = new InventoryPage();
+    InventoryPage inventoryPage = new InventoryPage();
 
     @DisplayName("Сортировка по убыванию цены")
     @Test
@@ -20,7 +20,7 @@ public class SortingByPriceHighToLowTest {
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButton();
-        sorting.clickHighToLow();
-        sorting.checkHighToLow();
+        inventoryPage.clickHighToLow();
+        inventoryPage.checkHighToLow();
     }
 }

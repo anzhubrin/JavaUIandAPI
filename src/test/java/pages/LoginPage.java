@@ -17,20 +17,16 @@ public class LoginPage {
     public void openLoginPage() {
         open(LOGIN_URL);
     }
-
     public void setLogin(String value) {
         loginField.setValue(value);
     }
-
     public void setPassword(String value) {
         passwordField.setValue(value);
     }
-
     public void clickLoginButton() {
         loginButton.click();
         textWithProduct.shouldHave(Condition.exactText("Products"));
     }
-
     public void clickLoginButtonAndError() {
         loginButton.click();
         $(".error-button").shouldBe(Condition.visible);

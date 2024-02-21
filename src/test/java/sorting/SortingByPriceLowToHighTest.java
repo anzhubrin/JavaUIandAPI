@@ -12,7 +12,7 @@ public class SortingByPriceLowToHighTest extends LoginStandardUserTest {
     private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
-    InventoryPage sorting = new InventoryPage();
+    InventoryPage inventoryPage = new InventoryPage();
 
     @DisplayName("Сортировка по возврастанию цены")
     @Test
@@ -21,7 +21,7 @@ public class SortingByPriceLowToHighTest extends LoginStandardUserTest {
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButton();
-        sorting.clickLowToHigh();
-        sorting.checkLowToHigh();
+        inventoryPage.clickLowToHigh();
+        inventoryPage.checkLowToHigh();
     }
 }

@@ -11,7 +11,7 @@ public class AddOneProductInCart {
     private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
-    InventoryPage addingToCart = new InventoryPage();
+    InventoryPage inventoryPage = new InventoryPage();
 
     @DisplayName("Добавление одного товара в корзину")
     @Test
@@ -20,6 +20,6 @@ public class AddOneProductInCart {
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButton();
-        addingToCart.addAndCheckOneProduct();
+        inventoryPage.addAndCheckOneProduct();
     }
 }

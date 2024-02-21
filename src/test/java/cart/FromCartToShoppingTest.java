@@ -10,7 +10,7 @@ public class FromCartToShoppingTest {
     private final String PASSWORD = "secret_sauce";
 
     LoginPage loginPage = new LoginPage();
-    CartPage cartPage = new CartPage();
+    CartPage inventoryPage = new CartPage();
 
     @Test
     void fromCartToProductTest() {
@@ -18,7 +18,7 @@ public class FromCartToShoppingTest {
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
         loginPage.clickLoginButton();
-        cartPage.goToCart();
-        cartPage.continueShoppingButton();
+        inventoryPage.goToCart();
+        inventoryPage.continueShoppingButton();
     }
 }

@@ -16,7 +16,6 @@ public class LoginPerformanceGlitchUserTest {
     @DisplayName("Авторизация глюченного пользователя")
     @Test
     void loginStandardUser() {
-
         loginPage.openLoginPage();
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);

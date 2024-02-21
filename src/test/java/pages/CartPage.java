@@ -12,6 +12,7 @@ public class CartPage {
     private final SelenideElement BackToProductsButton = $("#back-to-products");
     private final SelenideElement ContinueShoppingButton = $("#continue-shopping");
     private final SelenideElement textWithProduct = $(".title");
+
     public void goToCart() {
         GoToCart.click();
     }
@@ -19,7 +20,6 @@ public class CartPage {
         GoToProductFromCard.click();
         BackToProductsButton.shouldBe(visible);
     }
-
     public void continueShoppingButton() {
         ContinueShoppingButton.click();
         textWithProduct.shouldHave(text("Products"));

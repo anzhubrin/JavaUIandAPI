@@ -14,7 +14,6 @@ public class LoginProblemUserTest {
     @DisplayName("Авторизация проблемного пользователя")
     @Test
     void loginStandardUser() {
-
         loginPage.openLoginPage();
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);

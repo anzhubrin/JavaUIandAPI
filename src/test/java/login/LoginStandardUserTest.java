@@ -12,7 +12,6 @@ public class LoginStandardUserTest {
     @DisplayName("Авторизация стандартного пользователя")
     @Test
     void loginStandardUser() {
-
         loginPage.openLoginPage();
         loginPage.setLogin(LOGIN);
         loginPage.setPassword(PASSWORD);
