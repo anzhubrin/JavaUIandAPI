@@ -7,9 +7,6 @@ import pages.LoginPage;
 
 public class SortingByNameAZTest {
 
-    private final String LOGIN = "standard_user";
-    private final String PASSWORD = "secret_sauce";
-
     LoginPage loginPage = new LoginPage();
     InventoryPage inventoryPage = new InventoryPage();
 
@@ -17,8 +14,8 @@ public class SortingByNameAZTest {
     @Test
     void sortingByNameAZ() {
         loginPage.openLoginPage();
-        loginPage.setLogin(LOGIN);
-        loginPage.setPassword(PASSWORD);
+        loginPage.setStandardLogin();
+        loginPage.setPassword();
         loginPage.clickLoginButton();
         inventoryPage.clickAZ();
         inventoryPage.checkAZ();

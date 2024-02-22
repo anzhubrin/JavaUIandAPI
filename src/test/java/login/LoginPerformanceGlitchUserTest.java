@@ -7,9 +7,6 @@ import pages.LoginPage;
 
 public class LoginPerformanceGlitchUserTest {
 
-    private final String LOGIN = "performance_glitch_user";
-    private final String PASSWORD = "secret_sauce";
-
     LoginPage loginPage = new LoginPage();
 
     @Tag("BLOCKER")
@@ -17,8 +14,8 @@ public class LoginPerformanceGlitchUserTest {
     @Test
     void loginStandardUser() {
         loginPage.openLoginPage();
-        loginPage.setLogin(LOGIN);
-        loginPage.setPassword(PASSWORD);
+        loginPage.setGlitchLogin();
+        loginPage.setPassword();
         loginPage.clickLoginButton();
     }
 }

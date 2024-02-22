@@ -20,34 +20,37 @@ public class InventoryPage {
     public void clickAZ() {
         chooseAZ.click();
     }
+
     public void clickZA() {
         chooseZA.click();
     }
+
     public void clickLowToHigh() {
         chooseLowToHigh.click();
     }
+
     public void clickHighToLow() {
         chooseHighToLow.click();
     }
+
     public void checkAZ() {
         checkChooseSort.shouldHave(Condition.text("Sauce Labs Backpack"));;
     }
+
     public void checkZA() {
         checkChooseSort.shouldHave(Condition.text("Test.allTheThings() T-Shirt (Red)"));;
     }
+
     public void checkLowToHigh() {
         checkChooseSort.shouldHave(Condition.text("Sauce Labs Onesie"));;
     }
+
     public void checkHighToLow() {
         checkChooseSort.shouldHave(Condition.text("Sauce Labs Fleece Jacket"));;
     }
+
     public void addAndCheckOneProduct() {
         addFirstToCart.click();
         iconCart.shouldHave(text("1"));
-    }
-    public void addAndCheckSecondAndThirdProduct() {
-        addSecondToCart.click();
-        addThirdToCart.click();
-        iconCart.shouldHave(text("3"));
     }
 }

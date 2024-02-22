@@ -6,17 +6,14 @@ import pages.LoginPage;
 
 public class LoginProblemUserTest {
 
-    private final String LOGIN = "problem_user";
-    private final String PASSWORD = "secret_sauce";
-
     LoginPage loginPage = new LoginPage();
 
-    @DisplayName("Авторизация проблемного пользователя")
+    @DisplayName("Авторизация проблемного пользователя, с поломанным сайтом")
     @Test
     void loginStandardUser() {
         loginPage.openLoginPage();
-        loginPage.setLogin(LOGIN);
-        loginPage.setPassword(PASSWORD);
+        loginPage.setProblemLogin();
+        loginPage.setPassword();
         loginPage.clickLoginButton();
     }
 }

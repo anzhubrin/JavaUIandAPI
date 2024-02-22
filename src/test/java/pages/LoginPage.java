@@ -17,16 +17,40 @@ public class LoginPage {
     public void openLoginPage() {
         open(LOGIN_URL);
     }
-    public void setLogin(String value) {
-        loginField.setValue(value);
+
+    public void setStandardLogin() {
+        loginField.setValue("standard_user");
     }
-    public void setPassword(String value) {
-        passwordField.setValue(value);
+
+    public void setVisualLogin() {
+        loginField.setValue("visual_user");
     }
+
+    public void setGlitchLogin() {
+        loginField.setValue("performance_glitch_user");
+    }
+
+    public void setProblemLogin() {
+        loginField.setValue("problem_user");
+    }
+
+    public void setLockedLogin() {
+        loginField.setValue("locked_out_user");
+    }
+
+    public void setErrorLogin() {
+        loginField.setValue("error_user");
+    }
+
+    public void setPassword() {
+        passwordField.setValue("secret_sauce");
+    }
+
     public void clickLoginButton() {
         loginButton.click();
         textWithProduct.shouldHave(Condition.exactText("Products"));
     }
+
     public void clickLoginButtonAndError() {
         loginButton.click();
         $(".error-button").shouldBe(Condition.visible);

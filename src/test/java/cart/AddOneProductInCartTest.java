@@ -5,10 +5,7 @@ import org.junit.jupiter.api.Test;
 import pages.InventoryPage;
 import pages.LoginPage;
 
-public class AddOneProductInCart {
-
-    private final String LOGIN = "standard_user";
-    private final String PASSWORD = "secret_sauce";
+public class AddOneProductInCartTest {
 
     LoginPage loginPage = new LoginPage();
     InventoryPage inventoryPage = new InventoryPage();
@@ -17,8 +14,8 @@ public class AddOneProductInCart {
     @Test
     void addOneProductInCart() {
         loginPage.openLoginPage();
-        loginPage.setLogin(LOGIN);
-        loginPage.setPassword(PASSWORD);
+        loginPage.setStandardLogin();
+        loginPage.setPassword();
         loginPage.clickLoginButton();
         inventoryPage.addAndCheckOneProduct();
     }

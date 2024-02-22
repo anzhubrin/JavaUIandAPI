@@ -6,10 +6,7 @@ import org.junit.jupiter.api.Test;
 import pages.InventoryPage;
 import pages.LoginPage;
 
-public class SortingByPriceLowToHighTest extends LoginStandardUserTest {
-
-    private final String LOGIN = "standard_user";
-    private final String PASSWORD = "secret_sauce";
+public class SortingByPriceLowToHighTest {
 
     LoginPage loginPage = new LoginPage();
     InventoryPage inventoryPage = new InventoryPage();
@@ -18,8 +15,8 @@ public class SortingByPriceLowToHighTest extends LoginStandardUserTest {
     @Test
     void ByPriceLowToHigh() {
         loginPage.openLoginPage();
-        loginPage.setLogin(LOGIN);
-        loginPage.setPassword(PASSWORD);
+        loginPage.setStandardLogin();
+        loginPage.setPassword();
         loginPage.clickLoginButton();
         inventoryPage.clickLowToHigh();
         inventoryPage.checkLowToHigh();

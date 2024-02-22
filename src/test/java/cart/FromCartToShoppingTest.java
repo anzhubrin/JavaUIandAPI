@@ -1,24 +1,23 @@
 package cart;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import pages.LoginPage;
 
 public class FromCartToShoppingTest {
 
-    private final String LOGIN = "standard_user";
-    private final String PASSWORD = "secret_sauce";
-
     LoginPage loginPage = new LoginPage();
-    CartPage inventoryPage = new CartPage();
+    CartPage cartPage = new CartPage();
 
+    @DisplayName("Переход из корзины обратно к покупкам")
     @Test
     void fromCartToProductTest() {
         loginPage.openLoginPage();
-        loginPage.setLogin(LOGIN);
-        loginPage.setPassword(PASSWORD);
+        loginPage.setStandardLogin();
+        loginPage.setPassword();
         loginPage.clickLoginButton();
-        inventoryPage.goToCart();
-        inventoryPage.continueShoppingButton();
+        cartPage.goToCart();
+        cartPage.continueShoppingButton();
     }
 }
