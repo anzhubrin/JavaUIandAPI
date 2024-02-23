@@ -24,6 +24,7 @@ jobs:
         with:
           ref: github_actions
           path: github_actions
+
       - name: Build Report
         uses: simple-elf/allure-report-action@master
         if: always()
