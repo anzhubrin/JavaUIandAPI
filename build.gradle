@@ -3,6 +3,7 @@ plugins {
     id 'io.qameta.allure' version '2.9.6'
 }
 
+
 repositories {
     mavenCentral()
 }
@@ -10,7 +11,9 @@ repositories {
 dependencies {
     testImplementation (
             "com.codeborne:selenide:7.0.4",
-            "org.junit.jupiter:junit-jupiter:5.9.3")
+            "org.junit.jupiter:junit-jupiter:5.9.3",
+            "io.qameta.allure:allure-selenide:2.21.0",
+            platform("org.junit:junit-bom:5.9.1"))
 }
 
 tasks.withType(JavaCompile) {
