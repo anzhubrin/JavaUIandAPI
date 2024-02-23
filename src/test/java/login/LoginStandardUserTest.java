@@ -12,8 +12,6 @@ public class LoginStandardUserTest {
     @Test
     void loginStandardUser() {
 
-        Configuration.remote = "http://localhos:4444/wd/hub";
-
         loginPage.openLoginPage();
         loginPage.setStandardLogin();
         loginPage.setPassword();
