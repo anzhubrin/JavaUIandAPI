@@ -18,13 +18,8 @@ jobs:
 
       - name: Start selenoid
         uses: Xotabu4/selenoid-github-action@v2
-      - uses: actions/checkout@v1
-      - run: npm ci
       - name: Run tests
-        run: npm test
-
-#      - uses: Xotabu4/selenoid-github-action@v2
-#      - run: ./gradlew clean test
+        run: ./gradlew clean test
 
       - name: Copy History
         uses: actions/checkout@v2
