@@ -12,8 +12,7 @@ dependencies {
     testImplementation (
             "com.codeborne:selenide:7.0.4",
             "org.junit.jupiter:junit-jupiter:5.9.3",
-            "io.qameta.allure:allure-selenide:2.21.0",
-            platform("org.junit:junit-bom:5.9.1"))
+            "io.qameta.allure:allure-selenide:2.21.0")
 }
 
 tasks.withType(JavaCompile) {
