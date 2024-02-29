@@ -43,7 +43,7 @@ gradle clean test
 
 ____
 
-## <img src="images/AllureTestOps.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с Allure TestOps*</a>
+## <img src="images/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с Allure TestOps*</a>
 
 ___
 
