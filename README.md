@@ -44,9 +44,22 @@ gradle clean test
 ____
 
 ## <img src="images/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с Allure TestOps*</a>
-
+<image src="images/Allure.png" alt="Отчет Allure">
 ___
 
 ## <img src="images/Telegram.svg" width="25" height="25"  alt="Allure"/></a> *Уведомление в Telegram при помощи Alert bot*
 
+<image src="images/Telegram.png" alt="Отчет в Telegram">
+
+- Run for notifications in telegram:
+
+```java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.6.1.jar```
+
+- Send msg to telegram from terminal:
+```
+ curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "YYY", "text": "ZZZ", "disable_notification": false}' \
+     https://api.telegram.org/botXXX/sendMessage
+```
 ___
