@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "Swag Labs",
+    "environment": "prod",
+    "comment": "some comment",
+    "language": "ru",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "XXX",
+    "chat": "YYY",
+    "replyTo": ""
+  }
+}
