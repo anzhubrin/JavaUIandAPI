@@ -1,6 +1,5 @@
 package sorting;
 
-import login.LoginStandardUserTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.InventoryPage;

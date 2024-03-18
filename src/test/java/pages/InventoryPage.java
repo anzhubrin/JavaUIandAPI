@@ -13,8 +13,6 @@ public class InventoryPage {
     private final SelenideElement chooseHighToLow = $("#header_container > div.header_secondary_container > div > span > select > option:nth-child(4)");
     private final SelenideElement checkChooseSort = $(".inventory_item_name");
     private final SelenideElement addFirstToCart = $("#add-to-cart-sauce-labs-backpack");
-    private final SelenideElement addSecondToCart = $("#add-to-cart-sauce-labs-bike-light");
-    private final SelenideElement addThirdToCart = $("#add-to-cart-sauce-labs-bolt-t-shirt");
     private final SelenideElement iconCart = $(".shopping_cart_badge");
 
     public void clickAZ() {
@@ -34,19 +32,19 @@ public class InventoryPage {
     }
 
     public void checkAZ() {
-        checkChooseSort.shouldHave(Condition.text("Sauce Labs Backpack"));;
+        checkChooseSort.shouldHave(Condition.text("Sauce Labs Backpack"));
     }
 
     public void checkZA() {
-        checkChooseSort.shouldHave(Condition.text("Test.allTheThings() T-Shirt (Red)"));;
+        checkChooseSort.shouldHave(Condition.text("Test.allTheThings() T-Shirt (Red)"));
     }
 
     public void checkLowToHigh() {
-        checkChooseSort.shouldHave(Condition.text("Sauce Labs Onesie"));;
+        checkChooseSort.shouldHave(Condition.text("Sauce Labs Onesie"));
     }
 
     public void checkHighToLow() {
-        checkChooseSort.shouldHave(Condition.text("Sauce Labs Fleece Jacket"));;
+        checkChooseSort.shouldHave(Condition.text("Sauce Labs Fleece Jacket"));
     }
 
     public void addAndCheckOneProduct() {
