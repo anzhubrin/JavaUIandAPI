@@ -18,6 +18,7 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
       - uses: Xotabu4/selenoid-github-action@v2
+      - run: chmod +x gradlew
       - run: ./gradlew clean test
 #      - name: Copy History
 #        uses: actions/checkout@v4
