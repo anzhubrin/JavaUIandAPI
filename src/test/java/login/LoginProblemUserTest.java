@@ -11,9 +11,10 @@ public class LoginProblemUserTest {
     @DisplayName("Авторизация проблемного пользователя, с поломанным сайтом")
     @Test
     void loginStandardUser() {
-        loginPage.openLoginPage();
-        loginPage.setProblemLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
+        loginPage.openLoginPage()
+                .setProblemLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkSuccessLogin();
     }
 }

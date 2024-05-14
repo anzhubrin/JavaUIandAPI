@@ -13,11 +13,14 @@ public class FromCartToShoppingTest {
     @DisplayName("Переход из корзины обратно к покупкам")
     @Test
     void fromCartToProductTest() {
-        loginPage.openLoginPage();
-        loginPage.setStandardLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
-        cartPage.goToCart();
-        cartPage.continueShoppingButton();
+        loginPage.openLoginPage()
+                .setStandardLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkSuccessLogin();
+
+        cartPage.goToCart()
+                .continueShoppingButton()
+                .checkContinueShoppingButton();
     }
 }

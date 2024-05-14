@@ -8,12 +8,13 @@ public class LoginVisualUserTest {
 
     LoginPage loginPage = new LoginPage();
 
-    @DisplayName("Авторизация визуального пользователя, только просмотр товаров")
+    @DisplayName("Авторизация визуального пользователя")
     @Test
     void loginStandardUser() {
-        loginPage.openLoginPage();
-        loginPage.setVisualLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
+        loginPage.openLoginPage()
+                .setVisualLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkSuccessLogin();
     }
 }

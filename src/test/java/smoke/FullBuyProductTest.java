@@ -11,13 +11,16 @@ public class FullBuyProductTest {
 
     @Test
     void fromCartToProductTest() {
-        loginPage.openLoginPage();
-        loginPage.setStandardLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
-        cartPage.goToCart();
-        cartPage.goToCheckout();
-        cartPage.enterInfoForOrder();
-        cartPage.FinishOrder();
+        loginPage.openLoginPage()
+                .setStandardLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkSuccessLogin();
+
+        cartPage.goToCart()
+                .goToCheckout()
+                .enterInfoForOrder()
+                .finishOrder()
+                .checkFinishOrder();
     }
 }

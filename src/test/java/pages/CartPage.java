@@ -1,6 +1,8 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -20,33 +22,60 @@ public class CartPage {
     private final SelenideElement finishButton = $("#finish");
     private final SelenideElement CheckFinishOrder = $(".complete-header");
 
-    public void goToCart() {
+    @Step("Переходим в корзину")
+    public CartPage goToCart() {
         GoToCart.click();
+        return this;
     }
 
-    public void goToProductFromCard() {
+    @Step("Переходим на площадку с товарами из корзины")
+    public CartPage goToProductFromCard() {
         GoToProductFromCard.click();
+        return this;
+    }
+
+    @Step("Проверяем переход на площадку с товарами из корзины")
+    public CartPage checkProductFromCard() {
         BackToProductsButton.shouldBe(visible);
+        return this;
     }
 
-    public void continueShoppingButton() {
+    @Step("Нажимаем на кнопку продолжить покупки")
+    public CartPage continueShoppingButton() {
         ContinueShoppingButton.click();
+        return this;
+    }
+
+    @Step("Проверяем что мы на странице с товарами")
+    public CartPage checkContinueShoppingButton() {
         textWithProduct.shouldHave(text("Products"));
+        return this;
     }
 
-    public void goToCheckout() {
+    @Step("Переходим на страницу оформления заказа")
+    public CartPage goToCheckout() {
         Checkout.click();
+        return this;
     }
 
-    public void enterInfoForOrder() {
+    @Step("Заполняем данные покупателя и кликаем далее")
+    public CartPage enterInfoForOrder() {
         firstName.setValue("Andre");
         lastName.setValue("Silva");
         postalCode.setValue("4435");
         continueButton.click();
+        return this;
     }
 
-    public void FinishOrder() {
+    @Step("Кликаем завершить заказ")
+    public CartPage finishOrder() {
         finishButton.click();
+        return this;
+    }
+
+    @Step("Проверяем что заказ завершен")
+    public CartPage checkFinishOrder() {
         CheckFinishOrder.shouldHave(text("Thank you for your order!"));
+        return this;
     }
 }

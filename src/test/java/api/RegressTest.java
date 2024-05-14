@@ -8,8 +8,7 @@ import static io.restassured.RestAssured.*;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.*;
 
-public class Tests extends BaseTest{
-
+public class RegressTest extends BaseTest{
 
     @Test
     void testDataSingleUser (){

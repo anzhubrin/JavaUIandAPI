@@ -10,10 +10,10 @@ public class LoginStandardUserTest {
     @DisplayName("Авторизация стандартного пользователя")
     @Test
     void loginStandardUser() {
-
-        loginPage.openLoginPage();
-        loginPage.setStandardLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
+        loginPage.openLoginPage()
+                .setStandardLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkSuccessLogin();
     }
 }

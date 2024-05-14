@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -14,45 +15,69 @@ public class LoginPage {
     private final SelenideElement loginButton = $("#login-button");
     private final SelenideElement textWithProduct = $(".title");
 
-    public void openLoginPage() {
+    @Step("Открытие страницы авторизации")
+    public LoginPage openLoginPage() {
         open(LOGIN_URL);
+        return this;
     }
 
-    public void setStandardLogin() {
+    @Step("Ввод логина стандартного пользователя")
+    public LoginPage setStandardLogin() {
         loginField.setValue("standard_user");
+        return this;
     }
 
-    public void setVisualLogin() {
+    @Step("Ввод логина визуального пользователя")
+    public LoginPage setVisualLogin() {
         loginField.setValue("visual_user");
+        return this;
     }
 
-    public void setGlitchLogin() {
+    @Step("Ввод логина глюченного пользователя")
+    public LoginPage setGlitchLogin() {
         loginField.setValue("performance_glitch_user");
+        return this;
     }
 
-    public void setProblemLogin() {
+    @Step("Ввод логина проблемного пользователя")
+    public LoginPage setProblemLogin() {
         loginField.setValue("problem_user");
+        return this;
     }
 
-    public void setLockedLogin() {
+    @Step("Ввод логина заблокированного пользователя")
+    public LoginPage setLockedLogin() {
         loginField.setValue("locked_out_user");
+        return this;
     }
 
-    public void setErrorLogin() {
+    @Step("Ввод логина ошибочного пользователя")
+    public LoginPage setErrorLogin() {
         loginField.setValue("error_user");
+        return this;
     }
 
-    public void setPassword() {
+    @Step("Ввод пароля")
+    public LoginPage setPassword() {
         passwordField.setValue("secret_sauce");
+        return this;
     }
 
-    public void clickLoginButton() {
+    @Step("Нажатие кнопки логина")
+    public LoginPage clickLoginButton() {
         loginButton.click();
+        return this;
+    }
+
+    @Step("Проверка успешной авторизации")
+    public LoginPage checkSuccessLogin() {
         textWithProduct.shouldHave(Condition.exactText("Products"));
+        return this;
     }
 
-    public void clickLoginButtonAndError() {
-        loginButton.click();
+    @Step("Проверка неуспешной авторизации")
+    public LoginPage checkNoSuccessLogin() {
         $(".error-button").shouldBe(Condition.visible);
+        return this;
     }
 }

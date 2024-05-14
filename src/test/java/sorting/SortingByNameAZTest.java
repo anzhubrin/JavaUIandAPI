@@ -2,22 +2,24 @@ package sorting;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.InventoryPage;
+import pages.ProductsPage;
 import pages.LoginPage;
 
 public class SortingByNameAZTest {
 
     LoginPage loginPage = new LoginPage();
-    InventoryPage inventoryPage = new InventoryPage();
+    ProductsPage productsPage = new ProductsPage();
 
     @DisplayName("Сортировка по алфавиту")
     @Test
     void sortingByNameAZ() {
-        loginPage.openLoginPage();
-        loginPage.setStandardLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
-        inventoryPage.clickAZ();
-        inventoryPage.checkAZ();
+        loginPage.openLoginPage()
+                .setStandardLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkSuccessLogin();
+
+        productsPage.clickAZ()
+                .checkAZ();
     }
 }

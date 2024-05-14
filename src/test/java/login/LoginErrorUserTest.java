@@ -11,10 +11,11 @@ public class LoginErrorUserTest {
     @DisplayName("Авторизация пользователя с ошибками на сайте")
     @Test
     void loginStandardUser() {
-        loginPage.openLoginPage();
-        loginPage.setErrorLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButton();
+        loginPage.openLoginPage()
+                .setErrorLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkSuccessLogin();
 
     }
 }

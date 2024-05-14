@@ -12,9 +12,10 @@ public class LoginLockedUserTest {
     @DisplayName("Авторизация заблокированного пользователя")
     @Test
     void loginLockedUser(){
-        loginPage.openLoginPage();
-        loginPage.setLockedLogin();
-        loginPage.setPassword();
-        loginPage.clickLoginButtonAndError();
+        loginPage.openLoginPage()
+                .setLockedLogin()
+                .setPassword()
+                .clickLoginButton()
+                .checkNoSuccessLogin();
     }
 }
